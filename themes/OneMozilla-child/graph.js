@@ -29,6 +29,7 @@
       var totalDollars = periodData.reduce(function(acc, period) { return acc + period.data.amount; }, 0);
 
       document.querySelector('#period-graph-container .graph-amount-marker.top').innerHTML = '$' + totalDollars;
+      document.querySelector('#period-graph-title').innerHTML = '$' + totalDollars;
 
       var runningTotalDollars = 0;
       var runningTotalContributors = 0;
@@ -77,14 +78,14 @@
 
       columnTemplate.parentNode.removeChild(columnTemplate);
 
-      var totalContributions = sourceData.reduce(function(acc, source) { return acc + source.data.contributions; }, 0);
+      var totalContributions = sourceData.reduce(function(acc, source) { return acc + source.data.amount; }, 0);
 
       sourceData.forEach(function (source) {
         var column = columnTemplate.cloneNode(true);
         var aboveTitle = column.querySelector('.above-title');
         var belowTitle = column.querySelector('.below-title');
         column.style.width = 100 / sourceData.length + '%';
-        column.querySelector('.bar').style.height = 80 * source.data.contributions / totalContributions + '%';
+        column.querySelector('.bar').style.height = 80 * source.data.amount / totalContributions + '%';
         belowTitle.appendChild(document.createTextNode(source.name[0].toUpperCase() + source.name.substr(1)));
         aboveTitle.appendChild(document.createTextNode('$' + source.data.amount + ' from ' + source.data.contributors + ' contributors'));
         graphContainer.appendChild(column);

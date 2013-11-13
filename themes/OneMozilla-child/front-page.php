@@ -3,7 +3,7 @@
     <div id="dashboard-main" role="main">
       <div class="row">
         <section class="white-bg two-columns">
-        <h3 id="period-graph-title">Total so far: $750,000</h3>
+        <h3>Total so far: <span id="period-graph-title"></span></h3>
         <div class="graph-box-container">
 	        <div id="period-graph-container">
 	          <div class="top graph-amount-marker">$100</div>
