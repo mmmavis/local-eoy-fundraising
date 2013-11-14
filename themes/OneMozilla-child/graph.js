@@ -1,4 +1,10 @@
 (function() {
+  // From http://stackoverflow.com/questions/149055/how-can-i-format-numbers-as-money-in-javascript
+  function formatCurrencyNumber (n, c, d, t) {
+    c = isNaN(c = Math.abs(c)) ? 2 : c, d = d === undefined ? "," : d, t = t === undefined ? "." : t, s = n < 0 ? "-" : "", i = parseInt(n = Math.abs(+n || 0).toFixed(c), 10) + "", j = (j = i.length) > 3 ? j % 3 : 0;
+    return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+  }
+
   var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
   function formatDate (date) {
@@ -29,7 +35,7 @@
       var totalDollars = periodData.reduce(function(acc, period) { return acc + period.data.amount; }, 0);
 
       document.querySelector('#period-graph-container .graph-amount-marker.top').innerHTML = '$' + totalDollars;
-      document.querySelector('#period-graph-title').innerHTML = '$' + totalDollars;
+      document.querySelector('#period-graph-title').innerHTML = '$' + formatCurrencyNumber(totalDollars, 2, '.', ',');
 
       var runningTotalDollars = 0;
       var runningTotalContributors = 0;

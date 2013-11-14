@@ -61,8 +61,9 @@
 
       <section id="links" class="white-bg three-columns">
         <h3>Links</h3>
-        <h4>Donate Today</h4>
-        <a href="" target="">Campaign Overview</a><br/>
+        <?php echo get_page_uri('campaign-overview') ?>
+        <a href="" target="_blank">Donate Today</a><br/>
+        <a href=<?php echo get_page_uri('52') ?> target="_blank">Campaign Overview</a><br/>
         <a href="" target="">What donating fund</a><br/>
         <a href="" target="">Mozilla Manifesto</a><br/>
         <a href="" target="">What is our fundraising</a>
