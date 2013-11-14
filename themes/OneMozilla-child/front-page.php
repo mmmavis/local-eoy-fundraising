@@ -45,13 +45,6 @@
         <section id="older-blog-post" class="white-bg three-columns">
         <h3>Older Blog Post</h3>
         <?php if ( dynamic_sidebar('older-blog-post-widget') ) : else : endif; ?>
-        <!-- <div>
-          <a href="" target="">Why people give</a><br/>
-          <a href="" target="">Money and the Mission</a><br/>
-          <a href="" target="">Cash is king</a><br/>
-          <a href="" target="">Why people give</a><br/>
-          <a href="" target="">Money and the Mission</a>
-        </div> -->
       </section>
 
       <section id="twitter-feeds" class="white-bg three-columns">
@@ -61,11 +54,10 @@
 
       <section id="links" class="white-bg three-columns">
         <h3>Links</h3>
-        <?php echo get_page_uri('campaign-overview') ?>
-        <a href="" target="_blank">Donate Today</a><br/>
+        <a href="https://sendto.mozilla.org/" target="_blank">Donate Today</a><br/>
         <a href=<?php echo get_page_uri('52') ?> target="_blank">Campaign Overview</a><br/>
         <a href="" target="">What donating fund</a><br/>
-        <a href="" target="">Mozilla Manifesto</a><br/>
+        <a href="http://www.mozilla.org/en-US/about/manifesto/" target="_blank">Mozilla Manifesto</a><br/>
         <a href="" target="">What is our fundraising</a>
       </section>
       </div>
