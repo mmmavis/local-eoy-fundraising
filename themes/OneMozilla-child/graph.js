@@ -34,7 +34,7 @@
 
       var totalDollars = periodData.reduce(function(acc, period) { return acc + period.data.amount; }, 0);
 
-      document.querySelector('#period-graph-container .graph-amount-marker.top').innerHTML = '$' + totalDollars;
+      document.querySelector('#period-graph-container .graph-amount-marker.top').innerHTML = '$' + formatCurrencyNumber(totalDollars, 2, '.', ',');
       document.querySelector('#period-graph-title').innerHTML = '$' + formatCurrencyNumber(totalDollars, 2, '.', ',');
 
       var runningTotalDollars = 0;

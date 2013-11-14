@@ -17,12 +17,21 @@ Template Name: Campaign Overview Page
 		overflow: hidden;
 	}
 
+	#page{
+		padding: 0;
+	}
+
 	header{
 		line-height: 200%;
 	}
 
 	b{
 		font-family: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+	}
+
+	section{
+		float: right;
+		width: 50%;
 	}
 
 	.red-text{
@@ -35,12 +44,12 @@ Template Name: Campaign Overview Page
 
 	#brochure{
 		overflow: hidden;
-		/*background: #000;*/
+		/*background: #222;*/
 		padding: 100px 0;
 	}
 
 	#brochure .title{
-		font-size: 27px;
+		font-size: 25px;
 		margin-bottom: 25px;
 		line-height: 150%;
 		overflow: hidden;
@@ -48,11 +57,6 @@ Template Name: Campaign Overview Page
 
 	#brochure .title > *{
 		float: right;
-	}
-
-	#brochure section{
-		float: left;
-		width: 50%;
 	}
 
 	#chart{
@@ -83,11 +87,6 @@ Template Name: Campaign Overview Page
 	#letter header{
 		font-size: 35px;
 		margin-bottom: 15px;
-	}
-
-	#letter section{
-		float: left;
-		width: 50%;
 	}
 
 	#letter-content,
@@ -135,21 +134,60 @@ Template Name: Campaign Overview Page
 		clear: both;
 	}
 
+
+	@media only screen and (max-width: 767px) {
+		section{
+			width: 100%;
+		}
+
+		#chart{
+			position: static;
+			top: 0;
+			margin-top: 100px;
+		}
+
+		#explanation{
+			padding: 0;
+		}
+
+		#letter-cover .title{
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		#mozilla-wordmark {
+		    position: relative;
+		    bottom: 220px;
+		    float: right;
+		}
+
+	}
+
+	/*  @Tablet @Layout: 768px */
+	@media only screen and (min-width: 768px) and (max-width: 991px) {
+		#letter-cover .title{
+			font-size: 40px;
+		}
+	}
+
+	/*  @Narrow @Mobile @Layout: 480px */
+	@media only screen and (min-width: 320px) and (max-width: 479px) {
+		#brochure .title,
+		#letter-cover .title{
+			font-size: 40px;
+		}
+	}
+
 </style>
 
 <div id="brochure">
 	<div class="wrap">
 		<section>
-			<div id="chart">
-				<img src="http://localhost:8888/wordpress/wp-content/uploads/2013/11/Mozilla-EOY-Campaign-Final-big.png" />
-			</div>
-		</section>
-		<section>
 			<div id="explanation">
 				<div class="title">
 					<div class="red-text" style="font-size:20px; position:relative; top:10px"><b>Mozilla</b></div>
 					<b>End of Year Fundraising Campaign</b><br/>
-					<div class="red-text" style="font-size:35px"><b>2013</b></div>
+					<div class="red-text" style="font-size:32px"><b>2013</b></div>
 				</div>
 				<div class="clear"></div>
 				<p>
@@ -158,15 +196,15 @@ Template Name: Campaign Overview Page
 				<table id="list-table">
 					<tbody>
 						<tr>
-							<td><img src="http://localhost:8888/wordpress/wp-content/uploads/2013/11/num1.png" /></td>
-							<td>Each month will focus on one of hte themes behind our mission: flight, make, and empower.</td>
+							<td><img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/num1.png" /></td>
+							<td>Each month will focus on one of the themes behind our mission: flight, make, and empower.</td>
 						</tr>
 						<tr>
-							<td><img src="http://localhost:8888/wordpress/wp-content/uploads/2013/11/num2.png" /></td>
+							<td><img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/num2.png" /></td>
 							<td>A blog post by a senior executive will set the tone and provide language for the proceeding outreach across our channels.</td>
 						</tr>
 						<tr>
-							<td><img src="http://localhost:8888/wordpress/wp-content/uploads/2013/11/num3.png" /></td>
+							<td><img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/num3.png" /></td>
 							<td>The frequency of communication will ramp up as we near the end of December, culminating on the 30th, the biggest day of the year for campaign fundraising.</td>
 						</tr>
 					</tbody>
@@ -176,12 +214,17 @@ Template Name: Campaign Overview Page
 					We're fortunate to have new leadership behind this year's efforts, including a senior executive joining us from Change.or.  We have also engaged M+R Strategic Services, who advise Wikimedia's fundraising.
 				</p>
 				<p>
-					We're commited to making the 2013 campaign a success and hope that you'll join us in making it the biggest and best yet.
+					We're committed to making the 2013 campaign a success and hope that you'll join us in making it the biggest and best yet.
 				</p>
 				<div style="margin-top: 60px; font-size: 13px">
-					<span class="light-grey-text">For detailed information visit:</span> mzl.la/eoy2013<br/>
-					<span class="light-grey-text">To ask questions or get involved, e-mail</span> devteam@mozillafoundation.org
+					<span class="light-grey-text">For detailed information visit:</span> <a href="http://mzl.la/eoy2013" target="_blank">mzl.la/eoy2013</a><br/>
+					<span class="light-grey-text">To ask questions or get involved, e-mail</span> <a href="mailto:devteam@mozillafoundation.org?Subject=2013%20End%20of%20Year%20Fundraising%20Campaign" target="_top">devteam@mozillafoundation.org</a>
 				</div>
+			</div>
+		</section>
+		<section>
+			<div id="chart">
+				<img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/Mozilla-EOY-Campaign-Final-big.png" />
 			</div>
 		</section>
 	</div>
@@ -190,6 +233,17 @@ Template Name: Campaign Overview Page
 
 <div id="letter">
 	<div class="wrap">
+		<section>
+			<div id="letter-cover">
+				<div class="title" class="all-cap">
+					<b>2013</b> <br/>
+					END OF YEAR <br/>
+					FUNDRAISING <br/>
+					CAMPAIGN <br/>
+				</div>
+			</div>
+			<img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/mozilla.png" id="mozilla-wordmark" />
+		</section>
 		<section>
 			<div id="letter-content">
 				<header class="all-cap">Why this matters</header>
@@ -207,7 +261,7 @@ Template Name: Campaign Overview Page
 						The beauty of our project has always been that we can do more with less.  When we win, it's because of the people who contribute to the mission.
 					</p>
 					<p>
-						But as the importance of our mission grows - as the web faces new threats - we need to seize every advantage we have, build our resource base, and create new wyas to contribute.
+						But as the importance of our mission grows - as the web faces new threats - we need to seize every advantage we have, build our resource base, and create new ways to contribute.
 					</p>
 				</div>
 				<div class="col">
@@ -227,18 +281,7 @@ Template Name: Campaign Overview Page
 					</p>
 				</div>
 			</div>
-			<img src="http://localhost:8888/wordpress/wp-content/uploads/2013/11/letter-chart.png" />
-		</section>
-		<section>
-			<div id="letter-cover">
-				<div class="title" class="all-cap">
-					<b>2013</b> <br/>
-					END OF YEAR <br/>
-					FUNDRAISING <br/>
-					CAMPAIGN <br/>
-				</div>
-			</div>
-			<img src="http://localhost:8888/wordpress/wp-content/uploads/2013/11/mozilla.png" id="mozilla-wordmark" />
+			<img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/letter-chart.png" />
 		</section>
 	</div>
 </div>
