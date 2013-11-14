@@ -29,4 +29,5 @@
 </head>
 
 <body <?php body_class($theme_options[color_scheme]); ?>>
+  <div id="page">
   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false', ) ); ?>
