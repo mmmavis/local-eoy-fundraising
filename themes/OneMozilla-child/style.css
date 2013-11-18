@@ -166,10 +166,9 @@ a:active {
   padding: 0;
 }
 
-
-
-
-/*  Customized  */
+.clear{
+    clear: both;
+}
 
 #dashboard-main {
   float: left;
@@ -205,7 +204,7 @@ section h3{
 .two-columns{
     width: calc( 50% - 50px );
     width: 440px;   /* (1000px-20px)/2-(padding:15px*2+margin:10px*2)=490px-50px */ 
-    min-height: 230px;
+    min-height: 300px;
     float: left;
     display: inline-block;
     margin: 10px;
@@ -240,28 +239,61 @@ section h3{
 
 /* View Blog widget ========== */
 
-.slposts-widget .slposts-ulist-title{
-    border-bottom: 0;
-    margin-bottom: 5px;
+#blog-post-date{
+    float: left;
+    border: 1px solid #ADADAD;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #ccc;
+    background: rgba(204,204,204,0.1);
+    width: 35px;
+    padding: 5px 5px;
+    margin: 0 15px 10px 0;
+    text-align: center;
+    line-height: 100%;
+    
 }
 
-.slposts-widget #blog-post-author{
-    margin-bottom: 10px;
+#blog-post-date #month{
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+#blog-post-date #day{
+    font-size: 20px;
+}
+
+#blog-post-date #year{
+    font-size: 10px;
+}
+
+#blog-title{
+    float: left;
+    font-size: 18px;
+    line-height: 50px;
+    color: rgb(32, 103, 158);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: calc( 100% - 100px);
+}
+
+#latest-blog-summary #author{
     float: left;
 }
 
-.slposts-widget #blog-post-comment{
-    background: pink;
+#latest-blog-summary #author img{
+    margin-right: 5px;
+}
+
+#latest-blog-summary #num-comments{
     float: right;
+    background: url("../OneMozilla/img/icn-comment.png") no-repeat scroll 0 5px transparent;
+    padding-left: 20px;
 }
 
-#author-comment-row{
-    border: 1px solid red;
-    overflow: hidden;
-}
-
-.slposts-ulist-excerpt{
+#blog-excerpt{
     border-top: 1px solid #888;
+    margin-top: 10px;
     padding-top: 10px;
 }
 
