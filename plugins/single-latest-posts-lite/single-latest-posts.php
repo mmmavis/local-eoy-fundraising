@@ -79,7 +79,7 @@ function single_latest_posts( $parameters ) {
         'excerpt_trail'    => 'text',        // Excerpt's trailing element: text, image
         'full_meta'        => FALSE,         // Display full metadata
         'footer_meta'      => FALSE,         // Display footer metadata
-        'display_comments' => FALSE,         // Display comments' count (true or false)
+        'display_comments' => TRUE,         // Display comments' count (true or false)
         /*
          * Pagination & Sorting
          */
@@ -664,12 +664,12 @@ function single_latest_posts( $parameters ) {
             } else {
                 // Caption Wrapper
                 echo $html_tags['caption_o'];
-                // Open title box
-                echo $html_tags['title_o'];
-                // Print the title
-                echo "<a href='".$all_permalinks[$field->guid]."'>".$field->post_title."</a>";
-                // Close the title box
-                echo $html_tags['title_c'];
+                // // Open title box
+                // echo $html_tags['title_o'];
+                // // Print the title
+                // echo "<a href='".$all_permalinks[$field->guid]."'>".$field->post_title."</a>";
+                // // Close the title box
+                // echo $html_tags['title_c'];
                 if( $full_meta === 'true' ) {
                     // Open meta box
                     echo $html_tags['meta_o'];
@@ -678,22 +678,25 @@ function single_latest_posts( $parameters ) {
                     $format = get_option('date_format');
                     $datepost = date_i18n($format, strtotime(trim( $field->post_date) ) );
                     $author_url = get_author_posts_url($author->ID);
-                    if( $display_comments === 'true' ) {
+                    // // Open title box
+                    echo $html_tags['title_o'];
+                    // Print Date Post
+                    echo "<div id='blog-post-date'>" . $datepost . "</div>";
+                    // Print the title
+                    echo "<a href='".$all_permalinks[$field->guid]."'>".$field->post_title."</a>";
+                    // Close the title box
+                    echo $html_tags['title_c'];
+                    echo "<div id='author-comment-row'>";
+                    echo "<div id='blog-post-author'><a href='" . esc_url( get_author_posts_url( get_the_author_meta( 'ID', $author->ID ) ) ) . "'>" . $author->display_name . "</a></div>";
+                    if( $display_comments ) {
                         $comments_args = array(
                             'post_id' => $field->ID,
                             'count' => true
                         );
-                        $count_comments = "<a href='".get_comments_link( $field->ID )."'><i class='slpicon-comment'></i> ".get_comments( $comments_args )."</a>";
-                        // Print metainfo
-                        if( !is_rtl() ) {
-                            echo $datepost . ' ' . $count_comments;
-                        } else {
-                            echo $count_comments . ' - ' . $datepost;
-                        }
-                    } else {
-                        // Print metainfo
-                        echo $datepost;
+                        $count_comments = "<a id='blog-post-comment' href='".get_comments_link( $field->ID )."'><i class='slpicon-comment'></i> ".get_comments( $comments_args )."</a>";
+                        echo $count_comments;
                     }
+                    echo "</div>";
                     // Close meta box
                     echo $html_tags['meta_c'];
                 }
@@ -852,7 +855,7 @@ function slp_custom_excerpt($count, $content, $permalink, $excerpt_trail){
     switch( $excerpt_trail ) {
         // Text
         case 'text':
-            $content = $content.'<a href="'.$permalink.'">'.__('more','trans-slp').'</a>';
+            $content = $content.'&nbsp;<a href="'.$permalink.'">'.__('Continue reading','trans-slp').'</a>';
             break;
         // Image
         case 'image':
@@ -892,7 +895,7 @@ function slp_display_type($display_type, $instance, $wrapper_list_css, $wrapper_
                 'item_c' => "</li>",
                 'content_o' => "<div class='slposts-container slposts-ulist-container $slp_instance'>",
                 'content_c' => "</div>",
-                'meta_o' => "<span class='slposts-ulist-meta'><i class='slpicon-calendar'></i> ",
+                'meta_o' => "<span class='slposts-ulist-meta'>",
                 'meta_c' => "</span>",
                 'meta_fo' => "<span class='slposts-ulist-metafooter'><i class='slpicon-bookmark'></i> ",
                 'meta_fc' => "</span>",
@@ -902,8 +905,8 @@ function slp_display_type($display_type, $instance, $wrapper_list_css, $wrapper_
                 'thumbnail_ic' => "</div></li>",
                 'pagination_o' => "<div class='slposts-ulist-pagination slp-pagination'>",
                 'pagination_c' => "</div>",
-                'title_o' => "<h3 class='slposts-ulist-title'>",
-                'title_c' => "</h3>",
+                'title_o' => "<div class='slposts-ulist-title'>",
+                'title_c' => "</div>",
                 'excerpt_o' => "<ul class='slposts-ulist-excerpt'><li>",
                 'excerpt_c' => "</li></ul>",
                 'caption_o' => "<div class='slposts-caption'>",

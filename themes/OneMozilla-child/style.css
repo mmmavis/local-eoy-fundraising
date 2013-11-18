@@ -238,14 +238,31 @@ section h3{
     list-style-type: none;
 }
 
-/* RSS Feeds widget ========== */
+/* View Blog widget ========== */
 
-#rss-feed-widget ul{
-    list-style-type: none;
+.slposts-widget .slposts-ulist-title{
+    border-bottom: 0;
+    margin-bottom: 5px;
 }
 
-#rss-feed-widget .widgettitle{
-    display: none;
+.slposts-widget #blog-post-author{
+    margin-bottom: 10px;
+    float: left;
+}
+
+.slposts-widget #blog-post-comment{
+    background: pink;
+    float: right;
+}
+
+#author-comment-row{
+    border: 1px solid red;
+    overflow: hidden;
+}
+
+.slposts-ulist-excerpt{
+    border-top: 1px solid #888;
+    padding-top: 10px;
 }
 
 

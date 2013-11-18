@@ -1,17 +1,17 @@
 <?php
 /**
- * Register RSS Feed and widgetized areas.
+ * Register View Blog and widgetized areas.
  *
  */
-function rss_feed_widgets_init() {
+function view_blog_widgets_init() {
   register_sidebar( array(
-    'name' => 'RSS Feed Section',
-    'id' => 'rss-feed-widget',
-    'before_widget' => '<div id="rss-feed-widget">',
+    'name' => 'View Source Fundraising Section',
+    'id' => 'view-blog-widget',
+    'before_widget' => '<div id="view-blog-widget">',
     'after_widget' => '</div>'
   ) );
 }
-add_action( 'widgets_init', 'rss_feed_widgets_init' );
+add_action( 'widgets_init', 'view_blog_widgets_init' );
 
 
 
@@ -55,7 +55,7 @@ add_action( 'widgets_init', 'older_blog_post_widgets_init' );
  */
 function twitter_feed_widgets_init() {
   register_sidebar( array(
-    'name' => 'Twitter Feed Section',
+    'name' => 'Twitter Feeds Section',
     'id' => 'twitter-feed-widget',
     'before_widget' => '<div id="twitter-feed-widget">',
     'after_widget' => '</div>'
