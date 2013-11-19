@@ -232,6 +232,22 @@ section h3{
   text-decoration: underline;
 }
 
+#get-moz-updates{
+    background: #FFF;
+    color: #777;
+    font-size: 30px;
+    font-family: "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+#go-to-newsletter{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+
 /* View Blog Section ========== */
 
 #blog-post-date{
