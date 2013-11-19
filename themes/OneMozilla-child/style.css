@@ -232,12 +232,7 @@ section h3{
   text-decoration: underline;
 }
 
-
-#older-blog-post-widget ul{
-    list-style-type: none;
-}
-
-/* View Blog widget ========== */
+/* View Blog Section ========== */
 
 #blog-post-date{
     float: left;
@@ -321,6 +316,20 @@ section h3{
 .wp-polls ul li, .wp-polls-ul li, .wp-polls-ans ul li{
     margin: 0;
 }
+
+/* Recent Posts widget =========== */
+
+#older-blog-post-widget ul{
+    list-style-type: none;
+}
+
+#older-blog-post-widget ul li{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: rgb(119, 119, 119);
+}
+
 
 /*   Sandstone-like Buttons ===============    */
 
