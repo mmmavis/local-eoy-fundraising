@@ -346,6 +346,10 @@ section h3{
   color: rgb(119, 119, 119);
 }
 
+#older-blog-post-widget ul li:first-of-type{
+  display: none;
+}
+
 
 /*   Sandstone-like Buttons ===============    */
 

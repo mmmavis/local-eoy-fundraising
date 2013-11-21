@@ -196,15 +196,15 @@ Template Name: Campaign Overview Page
 				<table id="list-table">
 					<tbody>
 						<tr>
-							<td><img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/num1.png" /></td>
+							<td><img src="/wp-content/uploads/2013/11/num1.png" /></td>
 							<td>Each month will focus on one of the themes behind our mission: flight, make, and empower.</td>
 						</tr>
 						<tr>
-							<td><img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/num2.png" /></td>
+							<td><img src="/wp-content/uploads/2013/11/num2.png" /></td>
 							<td>A blog post by a senior executive will set the tone and provide language for the proceeding outreach across our channels.</td>
 						</tr>
 						<tr>
-							<td><img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/num3.png" /></td>
+							<td><img src="/wp-content/uploads/2013/11/num3.png" /></td>
 							<td>The frequency of communication will ramp up as we near the end of December, culminating on the 30th, the biggest day of the year for campaign fundraising.</td>
 						</tr>
 					</tbody>
@@ -224,7 +224,7 @@ Template Name: Campaign Overview Page
 		</section>
 		<section>
 			<div id="chart">
-				<img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/Mozilla-EOY-Campaign-Final-big.png" />
+				<img src="/wp-content/uploads/2013/11/Mozilla-EOY-Campaign-Final-big.png" />
 			</div>
 		</section>
 	</div>
@@ -242,7 +242,7 @@ Template Name: Campaign Overview Page
 					CAMPAIGN <br/>
 				</div>
 			</div>
-			<img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/mozilla.png" id="mozilla-wordmark" />
+			<img src="/wp-content/uploads/2013/11/mozilla.png" id="mozilla-wordmark" />
 		</section>
 		<section>
 			<div id="letter-content">
@@ -281,7 +281,7 @@ Template Name: Campaign Overview Page
 					</p>
 				</div>
 			</div>
-			<img src="http://fundraising.mofostaging.net/wp-content/uploads/2013/11/letter-chart.png" />
+			<img src="/wp-content/uploads/2013/11/letter-chart.png" />
 		</section>
 	</div>
 </div>
