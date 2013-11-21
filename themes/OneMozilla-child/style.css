@@ -35,11 +35,13 @@ Tags: two-columns, right-sidebar, fixed-width, responsive, adaptive-layout, cust
 */
 
 
-/* @Headings ***/
+body{
+  font-family: "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 .25em;
   line-height: 1;
-  font-family: "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
   font-weight: normal;
   text-shadow: 0 1px 0 rgba(255,255,255,0.75);
 }
@@ -316,6 +318,7 @@ section h3{
     line-height: 30px;
     font-family: "Open Sans Light";
     margin-bottom: 10px;
+    display: block;
 }
 
 .vote-label{
@@ -331,6 +334,7 @@ section h3{
 
 .wp-polls ul li, .wp-polls-ul li, .wp-polls-ans ul li{
     margin: 0;
+    margin-bottom: 10px;
 }
 
 /* Recent Posts widget =========== */

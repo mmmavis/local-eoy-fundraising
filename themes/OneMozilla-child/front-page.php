@@ -46,7 +46,7 @@
 
       <div class="row">
         <section id="older-blog-post" class="white-bg three-columns">
-        <h3>Older Blog Post</h3>
+        <h3>Older Blog Posts</h3>
         <?php if ( dynamic_sidebar('older-blog-post-widget') ) : else : endif; ?>
       </section>
 
@@ -61,7 +61,7 @@
         <h3>Links</h3>
         <a href="https://sendto.mozilla.org/" target="_blank">Donate Today</a><br/>
         <!-- remember to pass the right page_id: (staging) 20; -->
-        <a href=<?php echo get_page_uri('52') ?> target="_blank">Campaign Overview</a><br/>
+        <a href=<?php echo get_page_uri('20') ?> target="_blank">Campaign Overview</a><br/>
         <a href="http://www.mozilla.org/en-US/about/manifesto/" target="_blank">Mozilla Manifesto</a><br/>
         <a href="" target="">What is View-source Fundraising</a>
       </section>

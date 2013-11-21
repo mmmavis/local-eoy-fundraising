@@ -26,13 +26,11 @@
 	text-align: left;
 	background-image: none;
 	display: block;
-	font-size: 20px;
 }
 .wp-polls ul, .wp-polls-ul, .wp-polls-ans ul  {
 	text-align: left;
 	list-style: none;
-	float: left;
-	width: 200px;
+	float: none;
 }
 .wp-polls ul li:before, .wp-polls-ans ul li:before, #sidebar ul ul li:before {
 	content: '';
